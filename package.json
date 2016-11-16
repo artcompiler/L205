@@ -8,6 +8,7 @@
     "start": "node --harmony index.js"
   },
   "dependencies": {
+    "react": "^0.14.2",
     "express": "^4.0.x",
     "domready": "^1.0.8"
   },
