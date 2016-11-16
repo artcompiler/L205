@@ -3,7 +3,7 @@
 /* Copyright (c) 2015, Art Compiler LLC */
 
 import {assert, message, messages, reserveCodeRange} from "./assert.js";
-import * as http from "http";
+import * as https from "https";
 import * as querystring from "querystring";
 
 reserveCodeRange(1000, 1999, "compile");
@@ -175,7 +175,7 @@ let translate = (function() {
       port: getGCPort(),
       path: path,
     };
-    var req = http.get(options, function(res) {
+    var req = https.get(options, function(res) {
       var data = "";
       res.on('data', function (chunk) {
         data += chunk;
