@@ -25,7 +25,7 @@ function getGCPort() {
   if (port === 5205) {
     return "3000";
   } else {
-    return "80";
+    return "443";
   }
 }
 let translate = (function() {
