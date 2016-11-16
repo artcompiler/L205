@@ -150,7 +150,7 @@ exports.reserveCodeRange = reserveCodeRange;
 
 var _assert = require("./assert.js");
 
-window.exports.viewer = (function () {
+window.gcexports.viewer = function () {
   function update(el, obj, src, pool) {
     var data = JSON.parse(obj).data;
     var item = data[0];
@@ -169,11 +169,13 @@ window.exports.viewer = (function () {
     update: update,
     capture: capture
   };
-})(); /* -*- Mode: js; js-indent-level: 2; indent-tabs-mode: nil; tab-width: 2 -*- */
+}(); /* -*- Mode: js; js-indent-level: 2; indent-tabs-mode: nil; tab-width: 2 -*- */
 /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
 /* Copyright (c) 2015, Jeff Dyer, Art Compiler LLC */
 
 var ReactExample = React.createClass({
+  displayName: "ReactExample",
+
   propTypes: {
     lineNumbers: React.PropTypes.bool
   },
