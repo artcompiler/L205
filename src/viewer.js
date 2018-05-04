@@ -5,7 +5,7 @@ import {assert, message, messages, reserveCodeRange} from "./assert.js";
 import * as React from "react";
 window.gcexports.viewer = (function () {
   function update(el, obj, src, pool) {
-    var data = JSON.parse(obj).data;
+    var data = obj.data;
     var item = data[0];
     d3.json("/code/" + item, function(error, data) {
       if (error) return console.warn(error);
